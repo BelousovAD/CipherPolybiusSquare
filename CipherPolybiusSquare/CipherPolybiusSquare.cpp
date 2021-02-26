@@ -31,6 +31,11 @@ public:
 		}
 		int r = 0, c = 0;
 		for (int i = 0; i < password.size(); i++) {
+			if (password.find(password.at(i))) {
+				password.erase(password.begin() + i);
+			}
+		}
+		for (int i = 0; i < password.size(); i++) {
 			square[r][c] = password.at(i);
 			c++;
 			if (c == 5 + lang) {
