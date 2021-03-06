@@ -27,7 +27,6 @@
 *.lib
 
 # Executables
-*.exe
 *.out
 *.app
 ## Ignore Visual Studio temporary files, build results, and
