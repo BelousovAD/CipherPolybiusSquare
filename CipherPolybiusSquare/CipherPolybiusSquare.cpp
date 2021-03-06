@@ -29,10 +29,12 @@ public:
 		for (int i = 0; i < square.size(); i++) {
 			square[i].resize(5 + lang);
 		}
-		int r = 0, c = 0;
-		for (int i = 0; i < password.size(); i++) {
-			if (password.find(password.at(i))) {
+		int r = 0, c = 0, size = password.size();
+		for (int i = 0; i < size; i = i + 1) {
+			if (password.find(password.at(i)) != i) {
 				password.erase(password.begin() + i);
+				--size;
+				i = i - 1;
 			}
 		}
 		for (int i = 0; i < password.size(); i++) {
